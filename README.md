@@ -1,73 +1,194 @@
-# Welcome to your Lovable project
+# FoodShare
 
-## Project info
+FoodShare is a full-stack web platform designed to reduce food waste and combat hunger by connecting restaurants with NGOs. Restaurants can donate surplus food, while NGOs can request and manage food pickups for redistribution to communities in need.
 
-**URL**: https://lovable.dev/projects/d8985df7-b9d6-4d5d-8e0f-8fff78fd418b
+The platform provides separate dashboards and workflows for restaurants and NGOs, enabling efficient coordination, authentication, and food management.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+### Authentication
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d8985df7-b9d6-4d5d-8e0f-8fff78fd418b) and start prompting.
+* User Sign Up & Sign In
+* Forgot Password / Reset Password
+* Protected Routes
+* Role-based access (Restaurant / NGO)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Restaurant Features
 
-**Use your preferred IDE**
+* Create food donation listings
+* Manage available surplus food
+* View donation history
+* Track NGO pickup requests
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### NGO Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* Browse available food donations
+* Request food pickups
+* Manage accepted donations
+* Track ongoing distributions
 
-Follow these steps:
+### General Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+* Responsive modern UI
+* Role-based dashboards
+* Real-time backend integration with Supabase
+* Secure authentication and database management
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* shadcn/ui
+* React Router
+
+### Backend & Services
+
+* Supabase
+
+  * PostgreSQL Database
+  * Authentication
+  * Edge Functions
+
+### Additional Libraries
+
+* React Hook Form
+* Zod
+* TanStack Query
+* Radix UI
+* Recharts
+
+---
+
+## Project Structure
+
+```bash
+foodshare/
+├── public/
+├── src/
+│   ├── components/
+│   ├── contexts/
+│   ├── hooks/
+│   ├── integrations/
+│   │   └── supabase/
+│   ├── pages/
+│   └── lib/
+├── supabase/
+│   ├── functions/
+│   └── migrations/
+├── package.json
+└── vite.config.ts
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js
+* npm
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate into the project:
+
+```bash
+cd foodshare
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will run at:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+http://localhost:8080
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Environment Variables
 
-## What technologies are used for this project?
+Create a `.env` file in the root directory and add:
 
-This project is built with:
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_PUBLISHABLE_KEY=your_supabase_anon_key
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## Supabase Setup
 
-Simply open [Lovable](https://lovable.dev/projects/d8985df7-b9d6-4d5d-8e0f-8fff78fd418b) and click on Share -> Publish.
+This project uses Supabase for:
 
-## Can I connect a custom domain to my Lovable project?
+* Authentication
+* Database management
+* Edge Functions
+* Backend APIs
 
-Yes, you can!
+Database migrations are available in:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+supabase/migrations
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## Deployment
+
+The project can be deployed on:
+
+* Vercel
+* Netlify
+* Any Vite-compatible hosting platform
+
+For production deployment:
+
+```bash
+npm run build
+```
+
+---
+
+## Future Improvements
+
+* Real-time donation tracking
+* AI-powered food demand prediction
+* NGO verification system
+* Delivery partner integration
+* Analytics dashboard
+* Push notifications
+
+---
+
+## Goal
+
+FoodShare aims to reduce food waste while helping communities facing food insecurity by creating a seamless bridge between food providers and NGOs.
+
+---
